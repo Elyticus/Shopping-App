@@ -32,18 +32,20 @@ addButtonEl.addEventListener("click", function () {
 onValue(shoppingListInDB, function (snapshop) {
   if (snapshop.exists()) {
     let shoppingArray = Object.entries(snapshop.val());
+    shoppingList.style.fontStyle = "normal";
 
     clearShoppingList();
 
     for (let i = 0; i < shoppingArray.length; i++) {
       let currentItem = shoppingArray[i];
-      let currentItemID = currentItem[0];
-      let currentValue = currentItem[1];
+      // let currentItemID = currentItem[0];
+      // let currentValue = currentItem[1];
 
       appendItemToShoppingList(currentItem);
     }
   } else {
     shoppingList.textContent = "No items here... yet";
+    shoppingList.style.fontStyle = "italic";
   }
 });
 

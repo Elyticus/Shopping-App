@@ -103,15 +103,3 @@ ul li:hover {
   background: #ffb548;
   cursor: pointer;
 }
-
-.disclaimer {
-  transform: translate(0%, 800%);
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 14px;
-
-  color: #da1e40;
-  font-family: "Scope One", serif;
-}

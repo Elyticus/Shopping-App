@@ -24,9 +24,14 @@ const shoppingList = document.getElementById("shopping-list");
 addButtonEl.addEventListener("click", function () {
   let inputValue = inputFieldEl.value;
 
-  push(shoppingListInDB, inputValue);
+  if (inputValue === "") {
+    shoppingList.textContent = "Add an item first... meow";
+    shoppingList.style.fontStyle = "italic";
+  } else {
+    push(shoppingListInDB, inputValue);
 
-  clearInputFieldEl();
+    clearInputFieldEl();
+  }
 });
 
 onValue(shoppingListInDB, function (snapshop) {

@@ -25,7 +25,7 @@ addButtonEl.addEventListener("click", function () {
   let inputValue = inputFieldEl.value;
 
   if (inputValue === "") {
-    shoppingList.textContent = "Make a wish first... meow";
+    shoppingList.textContent = "Adauga un produs prima data... meow";
     shoppingList.style.fontStyle = "italic";
   } else {
     push(shoppingListInDB, inputValue);
@@ -49,7 +49,7 @@ onValue(shoppingListInDB, function (snapshop) {
       appendItemToShoppingList(currentItem);
     }
   } else {
-    shoppingList.textContent = "No wishes here... yet";
+    shoppingList.textContent = "Niciun produs adaugat... inca";
     shoppingList.style.fontStyle = "italic";
   }
 });
